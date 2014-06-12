@@ -39,3 +39,4 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'figaro', group: [:development]
+gem 'letter_opener', group: [:development]
