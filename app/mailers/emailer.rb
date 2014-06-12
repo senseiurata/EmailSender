@@ -1,5 +1,5 @@
 class Emailer < ActionMailer::Base
-  default from: "noreply@example.com"
+  default from: ENV["emailer_from"]
 
   def send_email
     mail(to: ENV["test_email"], subject: "Test")
