@@ -36,5 +36,5 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   # Test mail delivery with letter_opener gem
-  config.action_mailer.delivery_method = :letter_opener
+  # config.action_mailer.delivery_method = :letter_opener
 end
