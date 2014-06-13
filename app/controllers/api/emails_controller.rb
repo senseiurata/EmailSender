@@ -5,12 +5,10 @@ module Api
     def send_email
       email_attr = email_params
       
-      email_attr["to"] = parse_email(email_attr["to"])
-
       #explicitly set to empty string. otherwise default subject is function name "Send email"
       email_attr["subject"] ||= ""
 
-      unless email_attr["to"].nil?
+      if valid_email?(email_attr["to"])
         emailer = Emailer.send_email(email_attr)
 
         emailer.deliver
@@ -26,10 +24,8 @@ module Api
 
     private
 
-    def parse_email(email)
-      matches = /[\w+\-.]+@[a-z\d\-.]+\.[a-z]+/i.match(email)
-
-      matches ? matches[0] : nil
+    def valid_email?(email)
+      /[\w+\-.]+@[a-z\d\-.]+\.[a-z]+/i.match(email)
     end
 
     def email_params
