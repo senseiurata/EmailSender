@@ -1,9 +1,9 @@
 == README
 
-Send an email by sending a POST request with JSON content to the following URL:
+Send an email by sending a POST request with JSON content:
 
-http://newrelichw.herokuapp.com/api/send_email
+Sample route: http://www.example.com/api/send_email
 
 Sample JSON payload:
 
-{ "to": "Ken Urata <xxx@xxx.com>", "subject": "hello world", "body": "hello world!" }
+{ "to": "Ken Urata <kenurata@example.com>", "subject": "hello world", "body": "hello world!" }
